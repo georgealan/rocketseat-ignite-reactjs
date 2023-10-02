@@ -1,15 +1,15 @@
-import { Post } from "./Post"
-import { Header } from "./components/Header"
-import { Sidebar } from "./components/Sidebar"
+import { Post } from './components/Post'
+import { Header } from './components/Header'
+import { Sidebar } from './components/Sidebar'
 import './global.css'
-import './App.modules.css'
+import style from './App.module.css'
 
 export function App() {
   return (
     <div>
       <Header />
 
-      <div className="wrapper">
+      <div className={style.wrapper}>
         <Sidebar />
         <main>
           <Post 
