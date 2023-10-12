@@ -7,3 +7,16 @@
   gap: 2rem;
   align-items: flex-start;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+  /* 
+  How we using rem units we can simple change font-size propertie to alter layout measurements, all 
+  text size will change and other elements will change too, at same time, it's a good technic for responsiveness.
+  */
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
