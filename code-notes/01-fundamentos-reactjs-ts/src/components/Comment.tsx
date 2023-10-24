@@ -3,7 +3,12 @@ import style from './Comment.module.css'
 import { Avatar } from './Avatar'
 import { useState } from 'react'
 
-export function Comment(props) {
+interface CommentProps {
+  content: string
+  onDeleteComment: (comment: string) => void
+}
+
+export function Comment(props: CommentProps) {
   // When we create react states is important set an initial value that have the same type of the data that we'll use in the field.
   const [likeCount, setLikeCount] = useState(0) // React state initialized with value 0, the same type of the field we are using.
 
@@ -23,7 +28,7 @@ export function Comment(props) {
 
   return (
     <div className={style.comment}>
-      <Avatar hasBorder={false} src='https://github.com/georgealan.png'/>
+      <Avatar hasBorder={false} src='https://github.com/georgealan.png' alt=''/>
 
       <div className={style.commentBox}>
         <div className={style.commentContent}>
